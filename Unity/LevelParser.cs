@@ -87,7 +87,10 @@ namespace GDENGO3
                 {
                     ["Translate"] = new JArray(t.position.x, t.position.y, t.position.z),
                     ["Scale"] = new JArray(t.localScale.x, t.localScale.y, t.localScale.z),
-                    ["Rotation"] = new JArray(t.rotation.x, t.rotation.y, t.rotation.z, t.rotation.w)
+                    ["Rotation"] = new JArray(
+                        t.eulerAngles.x * Mathf.Deg2Rad, 
+                        t.eulerAngles.y * Mathf.Deg2Rad, 
+                        t.eulerAngles.z * Mathf.Deg2Rad)
                 };
 
                 var components= new JObject();

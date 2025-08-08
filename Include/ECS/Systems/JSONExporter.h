@@ -56,32 +56,11 @@ class JSONExporter : public Singleton<JSONExporter> {
 
 				auto translate = root["GameObjects"][i]["Transform"]["Translate"];
 				auto scale = root["GameObjects"][i]["Transform"]["Scale"];
-				auto rotate = root["GameObjects"][i]["Transform"]["Rotate"];
+				auto rotate = root["GameObjects"][i]["Transform"]["Rotation"];
 
 				entity->m_transform.m_translation = Vector3D(translate[0].asFloat(), translate[1].asFloat(), translate[2].asFloat());
 				entity->m_transform.m_scale = Vector3D(scale[0].asFloat(), scale[1].asFloat(), scale[2].asFloat());
-
-				float x = rotate[0].asFloat();
-				float y = rotate[1].asFloat();
-				float z = rotate[2].asFloat();
-				float w = rotate[3].asFloat();
-
-				// roll (x-axis rotation)
-				double sinr_cosp = 2 * (w * x + y * z);
-				double cosr_cosp = 1 - 2 * (x * x + y * y);
-				double r_x = std::atan2(sinr_cosp, cosr_cosp);
-
-				// pitch (y-axis rotation)
-				double sinp = std::sqrt(1 + 2 * (w * y - x * z));
-				double cosp = std::sqrt(1 - 2 * (w * y - x * z));
-				double r_y = 2 * std::atan2(sinp, cosp) - 3.14159265358979323846 / 2;
-
-				// yaw (z-axis rotation)
-				double siny_cosp = 2 * (w * z + x * y);
-				double cosy_cosp = 1 - 2 * (y * y + z * z);
-				double r_z = std::atan2(siny_cosp, cosy_cosp);
-
-				entity->m_transform.m_rotation = Vector3D(r_x,r_y,r_z);
+				entity->m_transform.m_rotation = Vector3D(rotate[0].asFloat(), rotate[1].asFloat(), rotate[2].asFloat());
 				
 				Json::Value component_data;
 

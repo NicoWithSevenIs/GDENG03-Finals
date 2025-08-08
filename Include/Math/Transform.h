@@ -113,24 +113,11 @@ class Transform
 		inline std::string ExportToJSON() {
 			std::stringstream s;
 
-			float cx = cos(m_rotation.m_x * 0.5f);
-			float sx = sin(m_rotation.m_x * 0.5f);
-			float cy = cos(m_rotation.m_y * 0.5f);
-			float sy = sin(m_rotation.m_y * 0.5f);
-			float cz = cos(m_rotation.m_z * 0.5f);
-			float sz = sin(m_rotation.m_z * 0.5f);
-
-			float x = sx * cy * cz + cx * sy * sz;
-			float y = cx * sy * cz - sx * cy * sz;
-			float z = cx * cy * sz + sx * sy * cz;
-			float w = cx * cy * cz - sx * sy * sz;
-
-
 
 			s << "\"Transform\": {\n"
 				<< "\"Translate\": [" << m_translation.m_x << "," << m_translation.m_y << "," << m_translation.m_z << "],\n"
 				<< "\"Scale\": [" << m_scale.m_x << "," << m_scale.m_y << "," << m_scale.m_z << "],\n"
-				<< "\"Rotation\": [" << x << "," << y << "," << z << "," << w << "]\n}";
+				<< "\"Rotation\": [" << m_rotation.m_x << "," << m_rotation.m_y << "," << m_rotation.m_z <<  "]\n}";
 		
 
 			return s.str();

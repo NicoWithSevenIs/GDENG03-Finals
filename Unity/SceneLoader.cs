@@ -25,13 +25,12 @@ namespace GDENG03
                        obj.Transform.Scale[1],
                        obj.Transform.Scale[2]
                        );
-                instance.transform.rotation =
-                    new Quaternion (
-                        obj.Transform.Rotation[0], 
-                        obj.Transform.Rotation[1],
-                        obj.Transform.Rotation[2],
-                        obj.Transform.Rotation[3]
+                instance.transform.rotation = Quaternion.Euler(
+                    Mathf.Rad2Deg * obj.Transform.Rotation[0],
+                    Mathf.Rad2Deg * obj.Transform.Rotation[1],
+                    Mathf.Rad2Deg * obj.Transform.Rotation[2]
                     );
+
                 foreach(var component in obj.Components)
                 {
                     AddComponent(instance, component.Key, component.Value);
