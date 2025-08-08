@@ -1,0 +1,30 @@
+{
+"GameObjects": [
+{
+"Name": "sdasdasd",
+"Enabled": 1,
+"Components": {
+"Transform": {
+"Translate": [0,0,0],
+"Scale": [1,1,1],
+"Rotation": [0,0,0,1]
+},
+"CubeRenderer": {},
+"PhysicsComponent": {}
+}
+},
+{
+"Name": "asdasd",
+"Enabled": 1,
+"Components": {
+"Transform": {
+"Translate": [0,0,0],
+"Scale": [1,1,1],
+"Rotation": [0,0,0,1]
+},
+"CubeRenderer": {},
+"PhysicsComponent": {}
+}
+}
+]
+}

@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{46fbbc46-5ee2-4634-be7d-511e19cfd799}</ProjectGuid>
+    <RootNamespace>GDENG03SceneEditor</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)Library\Interfaces;$(ProjectDir)DirectXTex\include;$(ProjectDir)IMGUI;$(ProjectDir)Include;$(ProjectDir)ReactPhysics3D;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)DirectXTex\bin;$(ProjectDir)ReactPhysics3D\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>d3d11.lib;d3dcompiler.lib;DirectXTex.lib;reactphysics3d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)Library\Interfaces;$(ProjectDir)DirectXTex\include;$(ProjectDir)IMGUI;$(ProjectDir)Include;$(ProjectDir)ReactPhysics3D;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)DirectXTex\bin;$(ProjectDir)ReactPhysics3D\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>d3d11.lib;d3dcompiler.lib;DirectXTex.lib;reactphysics3d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)Library\Interfaces;$(ProjectDir)DirectXTex\include;$(ProjectDir)IMGUI;$(ProjectDir)Include;$(ProjectDir)ReactPhysics3D;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)DirectXTex\bin;$(ProjectDir)ReactPhysics3D\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>d3d11.lib;d3dcompiler.lib;DirectXTex.lib;reactphysics3d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)Library\Interfaces;$(ProjectDir)DirectXTex\include;$(ProjectDir)IMGUI;$(ProjectDir)Include;$(ProjectDir)ReactPhysics3D;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)DirectXTex\bin;$(ProjectDir)ReactPhysics3D\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>d3d11.lib;d3dcompiler.lib;DirectXTex.lib;reactphysics3d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Game Engine\AppWindow.cpp" />
+    <ClCompile Include="Game Engine\ConstantBuffer.cpp" />
+    <ClCompile Include="Game Engine\DebugWindow.cpp" />
+    <ClCompile Include="Game Engine\DeviceContext.cpp" />
+    <ClCompile Include="Game Engine\EngineTime.cpp" />
+    <ClCompile Include="Game Engine\EntityManager.cpp" />
+    <ClCompile Include="Game Engine\GraphicsEngine.cpp" />
+    <ClCompile Include="Game Engine\HierarchyScreen.cpp" />
+    <ClCompile Include="Game Engine\IndexBuffer.cpp" />
+    <ClCompile Include="Game Engine\InputSystem.cpp" />
+    <ClCompile Include="Game Engine\InspectorScreen.cpp" />
+    <ClCompile Include="Game Engine\MenuBarUI.cpp" />
+    <ClCompile Include="Game Engine\ParentingManager.cpp" />
+    <ClCompile Include="Game Engine\PerspectiveCamera.cpp" />
+    <ClCompile Include="Game Engine\PhysicsComponent.cpp" />
+    <ClCompile Include="Game Engine\PhysicsSystem.cpp" />
+    <ClCompile Include="Game Engine\PixelShader.cpp" />
+    <ClCompile Include="Game Engine\ReparentPromptScreen.cpp" />
+    <ClCompile Include="Game Engine\SceneStateManager.cpp" />
+    <ClCompile Include="Game Engine\SwapChain.cpp" />
+    <ClCompile Include="Game Engine\Texture.cpp" />
+    <ClCompile Include="Game Engine\UIManager.cpp" />
+    <ClCompile Include="Game Engine\VertexBuffer.cpp" />
+    <ClCompile Include="Game Engine\VertexShader.cpp" />
+    <ClCompile Include="Game Engine\Window.cpp" />
+    <ClCompile Include="IMGUI\imgui.cpp" />
+    <ClCompile Include="IMGUI\imgui_demo.cpp" />
+    <ClCompile Include="IMGUI\imgui_draw.cpp" />
+    <ClCompile Include="IMGUI\imgui_impl_dx11.cpp" />
+    <ClCompile Include="IMGUI\imgui_impl_win32.cpp" />
+    <ClCompile Include="IMGUI\imgui_widgets.cpp" />
+    <ClCompile Include="Include\ECS\Components\CylinderRenderer.cpp" />
+    <ClCompile Include="Include\ECS\Components\MeshRenderer.cpp" />
+    <ClCompile Include="Include\ECS\Components\SphereRenderer.cpp" />
+    <ClCompile Include="Game Engine\SceneStateUI.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="IMGUI\imconfig.h" />
+    <ClInclude Include="IMGUI\imgui.h" />
+    <ClInclude Include="IMGUI\imgui_impl_dx11.h" />
+    <ClInclude Include="IMGUI\imgui_impl_win32.h" />
+    <ClInclude Include="IMGUI\imgui_internal.h" />
+    <ClInclude Include="IMGUI\imstb_rectpack.h" />
+    <ClInclude Include="IMGUI\imstb_textedit.h" />
+    <ClInclude Include="IMGUI\imstb_truetype.h" />
+    <ClInclude Include="Include\Cameras\Camera.h" />
+    <ClInclude Include="Include\Cameras\PerspectiveCamera.h" />
+    <ClInclude Include="Include\ECS\Components\Component.h" />
+    <ClInclude Include="Include\ECS\Components\CubeRenderer.h" />
+    <ClInclude Include="Include\ECS\Components\PhysicsComponent.h" />
+    <ClInclude Include="Include\ECS\Components\CylinderRenderer.h" />
+    <ClInclude Include="Include\ECS\Components\MeshRenderer.h" />
+    <ClInclude Include="Include\ECS\Components\QuadRenderer.h" />
+    <ClInclude Include="Include\ECS\Components\SphereRenderer.h" />
+    <ClInclude Include="Include\ECS\Entities\Entity.h" />
+    <ClInclude Include="Include\ECS\Systems\EntityManager.h" />
+    <ClInclude Include="Include\ECS\Systems\JSONExporter.h" />
+    <ClInclude Include="Include\ECS\Systems\PhysicsSystem.h" />
+    <ClInclude Include="Include\ECS\Systems\SceneStateManager.h" />
+    <ClInclude Include="Include\ECS\Systems\TimelineManager.h" />
+    <ClInclude Include="Include\Game Engine\EngineTime.h" />
+    <ClInclude Include="Include\GameObject\IGUID.h" />
+    <ClInclude Include="Include\GameObject\ParentingManager.h" />
+    <ClInclude Include="Include\Input\InputListener.h" />
+    <ClInclude Include="Include\Input\InputSystem.h" />
+    <ClInclude Include="Include\Interfaces\IDirtyHandler.h" />
+    <ClInclude Include="Include\Interfaces\IMediator.h" />
+    <ClInclude Include="Include\Interfaces\Singleton.h" />
+    <ClInclude Include="Include\Math\Constant.h" />
+    <ClInclude Include="Include\Math\Matrix4x4.h" />
+    <ClInclude Include="Include\Math\Point.h" />
+    <ClInclude Include="Include\Math\Transform.h" />
+    <ClInclude Include="Include\Math\Vector2D.h" />
+    <ClInclude Include="Include\Math\Vector3D.h" />
+    <ClInclude Include="Include\Math\Vector4D.h" />
+    <ClInclude Include="Include\Rendering\ConstantBuffer.h" />
+    <ClInclude Include="Include\Rendering\DeviceContext.h" />
+    <ClInclude Include="Include\Rendering\GraphicsEngine.h" />
+    <ClInclude Include="Include\Rendering\IndexBuffer.h" />
+    <ClInclude Include="Include\Rendering\MeshVertex.h" />
+    <ClInclude Include="Include\Rendering\PixelShader.h" />
+    <ClInclude Include="Include\Rendering\SwapChain.h" />
+    <ClInclude Include="Include\Rendering\Texture.h" />
+    <ClInclude Include="Include\Rendering\VertexBuffer.h" />
+    <ClInclude Include="Include\Rendering\VertexShader.h" />
+    <ClInclude Include="Include\Settings.h" />
+    <ClInclude Include="Include\Snapshot\SceneSnapshot.h" />
+    <ClInclude Include="Include\tiny_obj_loader.h" />
+    <ClInclude Include="Include\UI\DebugWindow.h" />
+    <ClInclude Include="Include\UI\HierarchyScreen.h" />
+    <ClInclude Include="Include\UI\InspectorScreen.h" />
+    <ClInclude Include="Include\UI\MenuBarUI.h" />
+    <ClInclude Include="Include\UI\ReparentPromptScreen.h" />
+    <ClInclude Include="Include\UI\SceneStateUI.h" />
+    <ClInclude Include="Include\UI\UIManager.h" />
+    <ClInclude Include="Include\UI\UIScreen.h" />
+    <ClInclude Include="Include\Utilities.h" />
+    <ClInclude Include="Include\Window\AppWindow.h" />
+    <ClInclude Include="Include\Window\Window.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="PixelShader.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="VertexShader.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

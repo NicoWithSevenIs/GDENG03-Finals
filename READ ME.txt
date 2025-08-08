@@ -1,0 +1,7 @@
+Name: Tolentino, John Enrico
+Entry File: main.cpp
+
+Instructions to run:
+ - Each Problem Source Code is its own branch. To check the implementation of the problem and to run it, 
+   go to the corresponding branch labeled HO-P<Problem-Num>.
+   - Ex: HO-P1 is Single Cube with Rainbow Pixel Shader
