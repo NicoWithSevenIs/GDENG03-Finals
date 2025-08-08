@@ -50,15 +50,23 @@ public:
 		this->m_cb->release();
 		delete this;
 	}
+	inline std::string ExportToJSON() override {
+		std::stringstream s;
+		s << "\"Renderer\": \"{";
+		s << "\\\"Type\\\": \\\"Quad\\\",";
+		s << "\\\"Texture\\\": \\\"";
+		s << "\\\"}\"";
+		return s.str();
+	}
 private:
 	inline void Load() {
 
 		this->strip_list =
 		{
-			{Vector3D(-0.5f, -0.5f, 0.0f), Vector2D(0,0), Vector3D(1,1,1)},
-			{Vector3D(-0.5f, 0.5f, 0.0f), Vector2D(0,1), Vector3D(1,1,1)},
-			{Vector3D(0.5f,  -0.5f, 0.0f), Vector2D(1,0), Vector3D(1,1,1)},
-			{Vector3D(0.5f, 0.5f, 0.0f), Vector2D(1,1), Vector3D(1,1,1)},
+			{Vector3D(-0.5f, -0.5f, 0.0f), Vector2D(0, 1), Vector3D(1,1,1)},
+			{Vector3D(-0.5f, 0.5f, 0.0f), Vector2D(0, 0), Vector3D(1,1,1)},
+			{Vector3D(0.5f,  -0.5f, 0.0f), Vector2D(1, 1), Vector3D(1,1,1)},
+			{Vector3D(0.5f, 0.5f, 0.0f), Vector2D(1, 0), Vector3D(1,1,1)},
 		};
 
 		this->m_vb = GraphicsEngine::get()->createVertexBuffer();
@@ -112,5 +120,7 @@ private:
 		GraphicsEngine::get()->getImmediateDeviceContext()->setVertexBuffer(m_vb);
 		GraphicsEngine::get()->getImmediateDeviceContext()->drawTriangleStrip(this->m_vb->getSizeVertexList(), 0);
 	}
+
+	
 
 };

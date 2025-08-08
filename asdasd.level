@@ -1,0 +1,28 @@
+{
+"GameObjects": [
+{
+"Name": "sadasd",
+"Enabled": 1,
+"Transform": {
+"Translate": [0,0,0],
+"Scale": [3,1,1],
+"Rotation": [0,0,0]
+},
+"Components": {
+"Renderer": "{\"Type\": \"Quad\",\"Texture\": \"\"}"
+}
+},
+{
+"Name": "asdasd",
+"Enabled": 1,
+"Transform": {
+"Translate": [2,0,0],
+"Scale": [1,1,1],
+"Rotation": [0,0,0]
+},
+"Components": {
+"Renderer": "{\"Type\": \"Capsule\",\"Texture\": \"\"}"
+}
+}
+]
+}

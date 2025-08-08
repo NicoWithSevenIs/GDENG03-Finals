@@ -1,0 +1,55 @@
+{
+"GameObjects": [
+{
+"Name": "Floor",
+"Enabled": 1,
+"Transform": {
+"Translate": [0,0,0],
+"Scale": [8,8,8],
+"Rotation": [-1.571,0,0]
+},
+"Components": {
+"Renderer": "{\"Type\": \"Quad\",\"Texture\": \"\"}"
+}
+},
+{
+"Name": "Cube1",
+"Enabled": 1,
+"Transform": {
+"Translate": [0,1,0],
+"Scale": [1,1,1],
+"Rotation": [0,0,0]
+},
+"Components": {
+"Renderer": "{\"Type\": \"Cube\",\"Texture\": \"\"}",
+"PhysicsComponent": "{\"Mass\":1000}"
+}
+},
+{
+"Name": "Cube2",
+"Enabled": 1,
+"Transform": {
+"Translate": [1,2.2,0],
+"Scale": [1,1,1],
+"Rotation": [0,0,0]
+},
+"Components": {
+"Renderer": "{\"Type\": \"Cube\",\"Texture\": \"\"}",
+"PhysicsComponent": "{\"Mass\":1000}"
+}
+},
+{
+"Name": "Cube3",
+"Enabled": 1,
+"Transform": {
+"Translate": [1.5,3.4,1],
+"Scale": [1,1,1],
+"Rotation": [0,0,0]
+},
+"Components": {
+"Renderer": "{\"Type\": \"Cube\",\"Texture\": \"\"}",
+"PhysicsComponent": "{\"Mass\":1000}"
+}
+}
+]
+}

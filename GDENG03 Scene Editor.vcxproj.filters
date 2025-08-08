@@ -123,6 +123,9 @@
     <ClCompile Include="Game Engine\PhysicsSystem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Include\ECS\Components\CapsuleRenderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Include\Cameras\Camera.h">
@@ -309,6 +312,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Include\ECS\Systems\JSONExporter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ECS\Components\CapsuleRenderer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

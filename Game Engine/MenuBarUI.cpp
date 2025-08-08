@@ -9,6 +9,7 @@
 #include "ECS/Components/CylinderRenderer.h"
 #include "ECS/Components/MeshRenderer.h"
 #include "ECS/Systems/TimelineManager.h"
+#include "ECS/Components/CapsuleRenderer.h"
 #include <random>
 #include <sstream>
 #include "ECS/Systems/JSONExporter.h"
@@ -66,13 +67,13 @@ void MenuBarUI::draw()
 					TimelineManager::get().SetDirty();
 				};
 			}
-			if (ImGui::MenuItem("Create Cylinder")) {
+			if (ImGui::MenuItem("Create Capsule")) {
 				doOnPrompt = [this]() {
 					if (prompt_input[0] == '\0' || prompt_input[0] == ' ' || prompt_input == nullptr) return;
 					auto e = new Entity(prompt_input);
 					e->cc.hasTex = false;
-					e->AddComponent<CylinderRenderer>();
-					e->GetComponent<CylinderRenderer>()->Load();
+					e->AddComponent<CapsuleRenderer>();
+					e->GetComponent<CapsuleRenderer>()->Load();
 					EntityManager::AddObject(e);
 					TimelineManager::get().SetDirty();
 					};

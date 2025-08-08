@@ -1,0 +1,80 @@
+{
+"GameObjects": [
+{
+"Name": "Floor",
+"Enabled": 1,
+"Transform": {
+"Translate": [0,0,0],
+"Scale": [10,10,1],
+"Rotation": [-1.507,0,0]
+},
+"Components": {
+"Renderer": "{\"Type\": \"Quad\",\"Texture\": \"\"}"
+}
+},
+{
+"Name": "Wall1",
+"Enabled": 1,
+"Transform": {
+"Translate": [0,1,4],
+"Scale": [10,6,0.5],
+"Rotation": [0,0,0]
+},
+"Components": {
+"Renderer": "{\"Type\": \"Cube\",\"Texture\": \"\"}",
+"PhysicsComponent": "{\"Mass\":1000}"
+}
+},
+{
+"Name": "Wall2",
+"Enabled": 1,
+"Transform": {
+"Translate": [0,1,-4],
+"Scale": [10,3,0.5],
+"Rotation": [0,0,0]
+},
+"Components": {
+"Renderer": "{\"Type\": \"Cube\",\"Texture\": \"\"}",
+"PhysicsComponent": "{\"Mass\":1000}"
+}
+},
+{
+"Name": "Wall3",
+"Enabled": 1,
+"Transform": {
+"Translate": [-5,1,0],
+"Scale": [0.5,3,10],
+"Rotation": [0,0,0]
+},
+"Components": {
+"Renderer": "{\"Type\": \"Cube\",\"Texture\": \"\"}",
+"PhysicsComponent": "{\"Mass\":1000}"
+}
+},
+{
+"Name": "Wall4",
+"Enabled": 1,
+"Transform": {
+"Translate": [5,1,0],
+"Scale": [1,6,10],
+"Rotation": [0,0,0]
+},
+"Components": {
+"Renderer": "{\"Type\": \"Cube\",\"Texture\": \"\"}",
+"PhysicsComponent": "{\"Mass\":1000}"
+}
+},
+{
+"Name": "capsule",
+"Enabled": 1,
+"Transform": {
+"Translate": [0,1.5,0],
+"Scale": [1,1,1],
+"Rotation": [0,0,0]
+},
+"Components": {
+"Renderer": "{\"Type\": \"Capsule\",\"Texture\": \"\"}"
+}
+}
+]
+}

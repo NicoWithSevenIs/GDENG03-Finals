@@ -86,9 +86,10 @@ void AppWindow::InitializeSceneStateCallbacks()
 
 		UIManager::draw();
 
+		/*
 		if (TimelineManager::get().IsDirty()) {
 			TimelineManager::get().CreateSnapshot();
-		}
+		}*/
 	};
 
 	SceneStateManager::get().UpdateCallbacks[SceneState::PLAY] = [this]() {

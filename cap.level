@@ -1,0 +1,28 @@
+{
+"GameObjects": [
+{
+"Name": "sdas",
+"Enabled": 1,
+"Transform": {
+"Translate": [0,0,0],
+"Scale": [1,1,1],
+"Rotation": [0,0,0]
+},
+"Components": {
+"Renderer": "{\"Type\": \"Quad\",\"Texture\": \"\"}"
+}
+},
+{
+"Name": "sada",
+"Enabled": 1,
+"Transform": {
+"Translate": [3,0,0],
+"Scale": [1,1,1],
+"Rotation": [0,0,0]
+},
+"Components": {
+"Renderer": "{\"Type\": \"Quad\",\"Texture\": \"\"}"
+}
+}
+]
+}
