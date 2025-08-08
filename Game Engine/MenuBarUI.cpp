@@ -170,6 +170,13 @@ void MenuBarUI::draw()
 					JSONExporter::ExportToJSON(prompt_input);
 				};
 			}
+
+			if (ImGui::MenuItem("Import JSON")) {
+				doOnPrompt = [this]() {
+					if (prompt_input[0] == '\0' || prompt_input[0] == ' ' || prompt_input == nullptr) return;
+					JSONExporter::ImportJSON(prompt_input);
+					};
+			}
 			ImGui::EndMenu();
 		}
 		ImGui::EndMainMenuBar();

@@ -1,0 +1,82 @@
+{
+  "GameObjects": [
+    {
+      "Name": "Cube",
+      "Enabled": 1,
+      "Transform": {
+        "Translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Rotation": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "Components": {
+        "Renderer": "{\"Type\":\"Cube\", \"Texture\": \"\"}",
+        "PhysicsComponent": "{\"Mass\":1}"
+      }
+    },
+    {
+      "Name": "Cube (2)",
+      "Enabled": 1,
+      "Transform": {
+        "Translate": [
+          0.0,
+          0.0,
+          1.23
+        ],
+        "Scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Rotation": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "Components": {
+        "Renderer": "{\"Type\":\"Cube\", \"Texture\": \"\"}",
+        "PhysicsComponent": "{\"Mass\":1}"
+      }
+    },
+    {
+      "Name": "Cube (1)",
+      "Enabled": 1,
+      "Transform": {
+        "Translate": [
+          0.0,
+          1.24,
+          0.0
+        ],
+        "Scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Rotation": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "Components": {
+        "Renderer": "{\"Type\":\"Cube\", \"Texture\": \"\"}",
+        "PhysicsComponent": "{\"Mass\":1}"
+      }
+    }
+  ]
+}
